@@ -1,0 +1,22 @@
+    public static int solicitarNumeroValido(String mensaje, int minimo, int maximo) {
+        Scanner sc = new Scanner(System.in);
+        int numero;
+        while (true) {
+            System.out.println(mensaje);
+            if (sc.hasNextInt()) {
+                numero = sc.nextInt();
+                if (numero >= minimo && numero <= maximo) {
+                    return numero;
+                } else {
+                    System.out.println("Número fuera de rango. Intente de nuevo");
+                }
+            } else {
+                s.next();
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int numero = solicitarNumeroValido("Ingresa un número entre 1 y 5: ", 1, 5);
+        System.out.println("El número ingresado es: " + numero);
+    }
+}
