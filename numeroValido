@@ -1,3 +1,4 @@
+/*ENTERO con minimo y maximo*/
     public static int solicitarNumeroValido(String mensaje, int minimo, int maximo) {
         Scanner sc = new Scanner(System.in);
         int numero;
@@ -15,8 +16,22 @@
             }
         }
     }
-    public static void main(String[] args) {
-        int numero = solicitarNumeroValido("Ingresa un número entre 1 y 5: ", 1, 5);
-        System.out.println("El número ingresado es: " + numero);
+
+/*FLOTANTE CON MINIMO*/
+    public static float solicitarFloatValido(String mensaje, float minimo) {
+        Scanner sc = new Scanner(System.in);
+        float numero;
+        while (true) {
+            System.out.println(mensaje);
+            if (sc.hasNextFloat()) {
+                numero = sc.nextFloat();
+                if (numero >= minimo) {
+                    return numero;
+                } else {
+                    System.out.println("Deuda invalida, reingrese deuda: ");
+                }
+            } else {
+                sc.next();
+            }
+        }
     }
-}
