@@ -12,7 +12,7 @@
                     System.out.println("Número fuera de rango. Intente de nuevo");
                 }
             } else {
-                s.next();
+                sc.next();
             }
         }
     }
